@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ocean-900: #0c4a6e;
+  /* Biru Laut (Terang Mode) */
+  --color-navy-900: #020617;
+  /* Navy Blue (Gelap Mode) */
+  --color-luxury-amber-500: #f59e0b;
+  --color-luxury-amber-600: #d97706;
+  --font-serif: "Playfair Display", serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    @apply bg-slate-50 font-sans text-slate-800 antialiased;
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100% - 1.5rem));
+  }
+
+  /* Menyesuaikan gap */
+}
+
+.animate-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+/* Menghentikan jalan saat di-hover agar user bisa klik */
+.animate-scroll:hover {
+  animation-play-state: paused;
+}

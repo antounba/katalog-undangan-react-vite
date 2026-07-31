@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Administrator",
+    "email": "admin@admin.com",
+    "password": "$2b$10$inerZqLddC9f6UXh4YUSK.bsz5TK/ztjbFCbd4RUiKPpsLbNC3Tde",
+    "role": "admin"
+  },
+  {
+    "id": 1770647448459,
+    "name": "Member",
+    "email": "member@member.com",
+    "password": "$2b$10$jvKBv0u8Jo4RHw7NGmRPcOiP4EO.xzdWr9czuYLWfGVDaCPm.d69.",
+    "role": "member"
+  }
+]

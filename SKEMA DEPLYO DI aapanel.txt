@@ -1,0 +1,5 @@
+/www/wwwroot/undangan-app/
+├── backend/            <-- Node.js (Server.js)
+│   ├── uploads/        <-- Folder Gambar (Berikan izin Read/Write)
+│   └── node_modules/
+└── frontend/           <-- Hasil Build React (Dist/Build)
