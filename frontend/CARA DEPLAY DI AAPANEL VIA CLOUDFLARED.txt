@@ -1,0 +1,19 @@
+1. Setup Cloudflare Tunnel (Akses Luar)
+Karena server di rumah (Homelab), Anda butuh tunnel agar bisa diakses dari internet tanpa buka port router.
+
+Buka Terminal di aaPanel.
+
+Jalankan tunnel untuk dua port tersebut:
+
+Bash
+# Untuk Frontend (Website Utama)
+cloudflared tunnel route dns undangan-tunnel undangan.domainanda.com
+# Untuk Backend (API Gambar)
+cloudflared tunnel route dns undangan-tunnel api-undangan.domainanda.com
+Di Dashboard Cloudflare (Zero Trust), arahkan:
+
+============================================================================
+undangan.domainanda.com -> http://localhost:80 (Port Website aaPanel).
+
+api-undangan.domainanda.com -> http://localhost:5000 (Port PM2 Node.js).
+============================================================================
