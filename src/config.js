@@ -1,10 +1,10 @@
 // src/config.js
 const isLocalhost = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
 
-// Jika di laptop pakai localhost, jika di server pakai IP Server aaPanel
+// Mengambil URL dari environment variable Vite (.env), fallback ke localhost jika dibuka di laptop
 export const API_BASE_URL = isLocalhost
     ? "http://localhost:5000"
-    : "https://api-undangan.arscomcopy.online";
+    : (import.meta.env.VITE_API_URL || "http://api-undangan.arscomcopy.com");
 
 export const API_ENDPOINTS = {
     katalog: `${API_BASE_URL}/api/katalog`,
@@ -13,4 +13,3 @@ export const API_ENDPOINTS = {
     updateProfile: `${API_BASE_URL}/api/update-profile`,
     changePassword: `${API_BASE_URL}/api/change-password`,
 };
-
